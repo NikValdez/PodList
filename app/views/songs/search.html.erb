@@ -9,9 +9,17 @@
   <h1>Podcasts</h1>
   <ul>
     <% @results.each do |podcast| %>
-    <li><%= podcast['trackName'] %></li>
-    <li><%= podcast["feedUrl"] %></li>
-    <li><%= podcast %></li>
+      <%= image_tag podcast["artworkUrl60"], class: "pcast-image" %>
+      <li><%= podcast['trackName'] %></li>
+      <li><%= podcast["feedUrl"] %></li>
+      <li><%= podcast %></li>
+
     <% end %>
   </ul>
+<% end %>
+
+<h2>Eps</h2>
+<% @podcasts.each do |pod| %>
+  <li><%= pod.title %></li>
+  <br>
 <% end %>

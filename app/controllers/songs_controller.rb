@@ -1,5 +1,6 @@
 class SongsController < ApplicationController
   def search
+    @podcasts = Search.pod_feed
 
 
     # Avoid requesting info from API if there was no search query
