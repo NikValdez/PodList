@@ -10,16 +10,21 @@
   <ul>
     <% @results.each do |podcast| %>
       <%= image_tag podcast["artworkUrl60"], class: "pcast-image" %>
-      <li><%= podcast['trackName'] %></li>
-      <li><%= podcast["feedUrl"] %></li>
-      <li><%= podcast %></li>
-
+    <button type="button" id="track-name"><%= podcast['trackName'] %></button>
+        <li><% episodes = Feedjira::Feed.fetch_and_parse("#{ podcast["feedUrl"] }").entries %></li>
+        <% episodes.each do |episode| %>
+          <li class="episode-data">  <%= episode.title %> </li>
+        <% end %>
     <% end %>
   </ul>
 <% end %>
 
-<h2>Eps</h2>
-<% @podcasts.each do |pod| %>
-  <li><%= pod.title %></li>
-  <br>
-<% end %>
+
+<script>
+
+
+$("#track-name").click(function(){
+    $(".episode-data").toggle();
+});
+
+</script>
