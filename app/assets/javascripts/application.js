@@ -13,5 +13,9 @@
 //= require rails-ujs
 //= require jquery
 //= require jquery_ujs
+//= require popper
+//= require bootstrap-sprockets
+//= require twitter/typeahead
+//= require typeahead
 //= require turbolinks
 //= require_tree .
