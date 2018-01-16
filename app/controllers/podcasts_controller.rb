@@ -1,4 +1,4 @@
-class SongsController < ApplicationController
+class PodcastsController < ApplicationController
   def search
     @podcasts = Search.pod_feed
 

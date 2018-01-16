@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h3 class="my-playlist">My Playlist</h3>
+    </div>
+    <div class="col-md-4">
+      <div class="align-middle">
+    <%= form_tag(podcasts_search_path, method: :get) do %>
+        <%= label_tag(:term, "") %>
+        <h3 class="search-title">Find Podcasts</h3>
+        <%= text_field_tag :term, placeholder="", autofocus: true, class: "form-control typeahead" %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+    </div>
+
+  <% if @results.present? %>
+    <div class="results">
+        <div class="track-name">
+      <%= image_tag @results.first["artworkUrl60"], class: "pcast-image" %>
+        <%= @results.first['trackName'] %>
+      </div>
+          <button type="button", class="btn btn-primary", id="show-episodes">Show all episodes</button>
+            <% episodes = Feedjira::Feed.fetch_and_parse(@results.first["feedUrl"]).entries %>
+              <% episodes.each do |episode| %>
+                <li class="episode-data"><%=link_to episode.title, episode.url %></li>
+            <% end %>
+        <% end %>
+      </div>
+  </div>
+</div>

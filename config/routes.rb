@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'episodes/index'
 
-  get 'songs/search'
-  root 'songs#search'
+  get 'podcasts/search'
+  root 'podcasts#search'
 
 end
