@@ -1,10 +1,7 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4">
-      <h3 class="my-playlist">My Playlist</h3>
-    </div>
-    <div class="col-md-4">
-      <div class="align-middle">
+    <div class="col-md-6">
+      <div class="search-field">
     <%= form_tag(podcasts_search_path, method: :get) do %>
         <%= label_tag(:term, "") %>
         <h3 class="search-title">Find Podcasts</h3>
@@ -22,9 +19,15 @@
           <button type="button", class="btn btn-primary", id="show-episodes">Show all episodes</button>
             <% episodes = Feedjira::Feed.fetch_and_parse(@results.first["feedUrl"]).entries %>
               <% episodes.each do |episode| %>
-                <li class="episode-data"><%=link_to episode.title, episode.url %></li>
+              <div class="episode-drag"><li class="episode-data"><%= episode.title %></li></div>
             <% end %>
         <% end %>
       </div>
+  </div>
+  <div class="col-md-4">
+    <h3 class="my-playlist">My Playlist</h3>
+    <p class="playlist-subtitle">(drag episodes here)</p>
+    <div class="playlist-box">
+    </div>
   </div>
 </div>
