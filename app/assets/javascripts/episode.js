@@ -25,3 +25,34 @@ document.addEventListener('turbolinks:load', function () {
       target.setAttribute('data-x', x);
       target.setAttribute('data-y', y);
     }
+
+
+
+    interact('.dropzone').dropzone({
+      // Require a 50% element overlap for a drop to be possible
+      overlap: 0.50,
+
+      // listen for drop related events:
+
+      ondropactivate: function (event) {
+        // add active dropzone feedback
+        event.target.classList.add('drop-active');
+      },
+      ondragenter: function (event) {
+        var draggableElement = event.relatedTarget,
+            dropzoneElement = event.target;
+
+        // feedback the possibility of a drop
+        dropzoneElement.classList.add('drop-target');
+      },
+      ondragleave: function (event) {
+        // remove the drop feedback style
+        event.target.classList.remove('drop-target');
+      },
+
+      ondropdeactivate: function (event) {
+        // remove active dropzone feedback
+        event.target.classList.remove('drop-active');
+        event.target.classList.remove('drop-target');
+      }
+    });

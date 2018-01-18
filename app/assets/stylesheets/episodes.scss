@@ -58,10 +58,10 @@ a {
   margin-left: 3em;
 }
 
+
 .my-playlist {
   margin-top: 5em;
   margin-left: 4em;
-
 }
 .playlist-subtitle {
   margin-left: 6em;
@@ -72,9 +72,28 @@ a {
 }
 
 .playlist-box {
-  border: 1px solid grey;
+  border: 1px dotted grey;
   margin-left: 5em;
   width: 400px;
   height: 600px;
+}
 
+.share {
+  margin-bottom: 1em;
+  margin-right: 5em;
+}
+
+.dropzone {
+  background-color: #2196f324;
+}
+
+.drop-active {
+  border-color: #aaa;
+}
+
+.drop-target {
+  background-color: #022440;
+  color: black;
+  border-color: #fff;
+  border-style: solid;
 }
