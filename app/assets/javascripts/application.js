@@ -10,6 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require dragula
 //= require rails-ujs
 //= require jquery
 //= require jquery_ujs
@@ -17,6 +18,5 @@
 //= require bootstrap-sprockets
 //= require twitter/typeahead
 //= require typeahead
-//= require interactjs
 //= require turbolinks
 //= require_tree .
