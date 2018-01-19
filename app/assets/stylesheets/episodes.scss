@@ -13,8 +13,11 @@ a {
   display: none;
   list-style-type: none;
   margin: 0.5em;
+  font-family: 'Amatic SC', cursive;
+  color: black;
+  font-size: 20px;
   &:hover {
-    font-size: 110%;
+    font-size: 24px;
     color: #007bffbf;
   }
 }
@@ -26,10 +29,11 @@ a {
 .tt-selectable, .tt-dataset {
   background: #fff;
   width: 250%;
-  margin-bottom: 0.5em;
+  padding: 0.5em;
   color: #2b2a2acf;
+  font-size: 20px;
   &:hover {
-    font-size: 110%;
+    font-size: 24px;
     color: #007bffbf;
   }
 }
@@ -41,9 +45,6 @@ a {
 .align-middle {
   margin-top: 10em;
   }
-
-.search-title {
-}
 
 .results {
   margin-top: 2em;
@@ -60,11 +61,13 @@ a {
 
 
 .my-playlist {
-  margin-top: 5em;
-  margin-left: 4em;
+  margin-top: 4.5em;
+  margin-left: 2em;
 }
 .playlist-subtitle {
   margin-left: 6em;
+  font-size: 20px;
+  font-family: 'Amatic SC', cursive;
 }
 
 .search-title {
@@ -97,3 +100,17 @@ a {
   border-color: #fff;
   border-style: solid;
 }
+
+//Titles
+.track-name {
+  font-family: 'VT323', monospace;
+}
+
+
+.search-title, .my-playlist {
+  font-family: 'VT323', monospace;
+  font-size: 34px;
+}
+
+//font-family: 'Amatic SC', cursive;
+//font-family: 'VT323', monospace;

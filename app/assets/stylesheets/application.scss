@@ -1,7 +1,20 @@
 @import "bootstrap";
 @import "episodes";
 @import "dragula";
+@import "font-awesome";
+@import "footer";
 
 .form-control {
   width: 200%;
+}
+
+
+.justify-content-between {
+  background: #7f96a933;
+  font-family: 'VT323', monospace;
+  font-size: 22px;
+}
+
+body {
+  background: #cae7f566;
 }

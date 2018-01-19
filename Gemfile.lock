@@ -99,6 +99,8 @@ GEM
       loofah (>= 2.0)
       sax-machine (>= 1.0)
     ffi (1.9.18)
+    font-awesome-rails (4.7.0.2)
+      railties (>= 3.2, < 5.2)
     formatador (0.2.5)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -277,6 +279,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   factory_bot_rails
   feedjira
+  font-awesome-rails
   guard (~> 2.14)
   guard-livereload (~> 2.5, >= 2.5.2)
   itunes-search-api
