@@ -12,10 +12,10 @@
         <%= @results.first['trackName'] %>
       </div>
       <p class="playlist-subtitle">(Click on episode to add to playlist)</p>
-          <button type="button", class="btn btn-primary", id="show-episodes">Show all episodes</button>
+          <button type="button", class="button", id="show-episodes">Show all episodes</button>
             <% episodes = Feedjira::Feed.fetch_and_parse(@results.first["feedUrl"]).entries %>
               <% episodes.each do |episode| %>
-              <div id="right1" class="episode-drag"><li class="episode-data"><%= episode.title %></li></div>
+              <div id="right1" class="episode-drag"><li class="episode-data"><%= episode.title %> | <%= link_to "Link", episode.url, target: "_blank" %></li></div>
             <% end %>
         <% end %>
       </div>

@@ -18,3 +18,16 @@
 body {
   background: #cae7f566;
 }
+
+.button {
+  color: #fff;
+  background-color: #02b3e4;
+  border: 0.125rem solid transparent;
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+  float: right;
+  border-radius: 0.25rem;
+  &:hover {
+    box-shadow: 8px 10px 20px 0px rgba(46,61,73,0.15);
+  }
+}
