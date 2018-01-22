@@ -1,7 +1,12 @@
 document.addEventListener('turbolinks:load', function () {
   $("#show-episodes").click(function(){
-      $(".episode-data").toggle();
+      $(".episode-data").show();
   });
+
+  $('#show-episodes').click(function (){
+      $(this).hide();
+     }
+);
 
   drake = dragula([left1, right1]);
   var leftList = document.querySelector('#left1');
