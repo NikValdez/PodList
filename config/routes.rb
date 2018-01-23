@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'episodes/index'
+  # resources :playlists, only: [:index]
 
   get 'podcasts/search'
   root 'podcasts#search'

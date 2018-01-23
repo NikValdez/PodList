@@ -1,12 +1,12 @@
 <%= render 'shared/navbar' %>
 <div class="container">
   <div class="row">
-    <%= render "podcasts/playlist" %>
+    <%= render "playlists/playlist" %>
     <div class="col-md-6">
   <%= render 'podcasts/search_field' %>
 
   <% if @results.present? %>
-    <div class="results">
+    <div class="results" id="search_form">
         <div class="track-name">
       <%= image_tag @results.first["artworkUrl60"], class: "pcast-image" %>
         <%= @results.first['trackName'] %>
