@@ -3,8 +3,14 @@
   <div class="row">
     <%= render "playlists/playlist" %>
     <div class="col-md-6">
-  <%= render 'podcasts/search_field' %>
-
+      <div class="search-field">
+      <%= form_tag(podcasts_search_path, method: :get) do %>
+        <%= label_tag(:term, "") %>
+        <h3 class="search-title">Find Podcasts</h3>
+        <%= text_field_tag :term, placeholder="", autofocus: true, class: "form-control typeahead" %>
+        <%= submit_tag "Search", class: "button search" %>
+      <% end %>
+      </div>
   <% if @results.present? %>
     <div class="results" id="search_form">
         <div class="track-name">
@@ -14,18 +20,11 @@
       <p class="playlist-subtitle">(Click on episode to add to playlist)</p>
           <button type="button", class="button", id="show-episodes">Show all episodes</button>
             <% episodes = Feedjira::Feed.fetch_and_parse(@results.first["feedUrl"]).entries %>
-              <% episodes.first(20).each do |episode| %>
+              <% episodes.each do |episode| %>
               <div id="right1" class="episode-drag"><li class="episode-data"><%= episode.title %> | <%= link_to "Link", episode.url, target: "_blank" %></li></div>
             <% end %>
         <% end %>
       </div>
-      <button type="button", id="show-more">Show more</button>
-
   </div>
 </div>
 <%= render 'shared/footer' %>
-
-
-<script>
-
-</script>
