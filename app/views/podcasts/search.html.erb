@@ -14,7 +14,7 @@
       <p class="playlist-subtitle">(Click on episode to add to playlist)</p>
           <button type="button", class="button", id="show-episodes">Show all episodes</button>
             <% episodes = Feedjira::Feed.fetch_and_parse(@results.first["feedUrl"]).entries %>
-              <% episodes.first(20).each do |episode| %>
+              <% episodes.each do |episode| %>
               <div id="right1" class="episode-drag"><li class="episode-data"><%= episode.title %> | <%= link_to "Link", episode.url, target: "_blank" %></li></div>
             <% end %>
         <% end %>
@@ -24,8 +24,3 @@
   </div>
 </div>
 <%= render 'shared/footer' %>
-
-
-<script>
-
-</script>

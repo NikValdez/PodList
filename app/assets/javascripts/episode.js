@@ -1,6 +1,7 @@
 $( document ).on('turbolinks:load', function() {
   $("#show-episodes").click(function(){
       $(".episode-data").show();
+      $('.episode-data').slice(10).hide();
   });
 
   $('#show-episodes').click(function (){
@@ -8,6 +9,14 @@ $( document ).on('turbolinks:load', function() {
      }
   );
 
+  $("#show-more").click(function(){
+    $('.episode-data').slice(10).show();
+  });
+
+  $("#show-episodes").click(function(){
+      $("#show-more").show();
+
+  });
 
 
 drake = dragula([left1, right1]);
