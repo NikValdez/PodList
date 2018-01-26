@@ -114,9 +114,19 @@ a {
 }
 
 
-
+//Buttons
 #show-more {
   display: none;
+  margin-left: 7em;
+  border: 1px solid #007bffbf;
+  border-radius: 50%;
+  font-size: 26px;
+  height: 80px;
+  width: 80px;
+  background: #2196f324;
+  &:hover {
+    box-shadow: 8px 10px 20px 0px rgba(46,61,73,0.15);
+  }
 }
 //font-family: 'Amatic SC', cursive;
 //font-family: 'VT323', monospace;

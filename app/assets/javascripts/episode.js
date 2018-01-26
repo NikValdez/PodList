@@ -15,7 +15,11 @@ $( document ).on('turbolinks:load', function() {
 
   $("#show-episodes").click(function(){
       $("#show-more").show();
+  });
 
+
+  $("#show-more").click(function(){
+      $("#show-more").hide();
   });
 
 
