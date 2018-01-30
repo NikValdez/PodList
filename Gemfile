@@ -38,6 +38,7 @@ gem 'jquery-rails', '~> 4.3'
 gem 'twitter-typeahead-rails', '~> 0.11.1'
 gem 'bootstrap', '~> 4.0.0.beta3'
 gem "font-awesome-rails"
+gem 'mail_form'
 gem 'rails-assets-dragula', source: 'https://rails-assets.org'
 
 

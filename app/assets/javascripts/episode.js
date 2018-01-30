@@ -34,6 +34,7 @@ for (var i = 0; i < list.length; i++) {
       } else {
         rightList.appendChild(this);
       }
+
   });
 }
 })
