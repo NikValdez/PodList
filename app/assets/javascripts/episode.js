@@ -22,6 +22,10 @@ $( document ).on('turbolinks:load', function() {
       $("#show-more").hide();
   });
 
+  $("#share").click(function(){
+    $('textarea').val($("#left1 li").text())
+  });
+
 
 drake = dragula([left1, right1]);
 var leftList = document.querySelector('#left1');
