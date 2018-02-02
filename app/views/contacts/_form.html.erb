@@ -1,21 +1,39 @@
-<h2>Send Playlist</h2>
-		<%= form_for @contact do |f| %>
-				<%= f.label :name, class: 'contact_name' %><br>
-				<%= f.text_field :name, required: true, class: "form-control reg" %>
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+        <h3 id="myModalLabel"></h3>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal col-sm-12">
+          <h2>Send Playlist</h2>
+          		<%= form_for @contact do |f| %>
+          				<%= f.label :name, class: 'contact_name' %><br>
+          				<%= f.text_field :name, required: true, class: "form-control reg" %>
 
-				<br>
-			<div class="form-group">
-				<%= f.label :email %><br>
-				<%= f.email_field :email, required: true, class: "form-control reg" %>
-			</div>
+          				<br>
+          			<div class="form-group">
+          				<%= f.label :email %><br>
+          				<%= f.email_field :email, required: true, class: "form-control reg" %>
+          			</div>
 
-				<br>
-			<div class="form-group">
-				<%= f.label :message %><br>
-				<%= f.text_area :message, as: :text, class: "form-control reg", size: "10x10" %>
-			</div>
+          				<br>
+          			<div class="form-group">
+          				<%= f.label :message %><br>
+          				<%= f.text_area :message, as: :text, class: "form-control reg", size: "10x10" %>
+          			</div>
 
-  		<div class="form-group">
-  			<%= button_tag 'Send Message', class: "button", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Sending email..."} %>
-  		</div>
- <% end %>
+            		<div class="form-group">
+            			<%= button_tag 'Send Message', class: "button", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Sending email..."} %>
+            		</div>
+           <% end %>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="button button-2" data-dismiss="modal" aria-hidden="true">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
