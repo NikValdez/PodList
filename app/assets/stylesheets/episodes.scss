@@ -130,5 +130,16 @@ a {
   }
 }
 
+.pcast-shared {
+  text-align: center;
+  margin: 2em;
+}
+
+.shared {
+  display: flex;
+  float: none !important;
+  justify-content: center !important;
+}
+
 //font-family: 'Amatic SC', cursive;
 //font-family: 'VT323', monospace;

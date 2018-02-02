@@ -1,1 +1,14 @@
-<p>I'll get back to you when I have a minute.</p>
+<%= render 'shared/navbar' %>
+<div class="container">
+  <p class="pcast-shared">Your Playlist has been sent, the email may take a few minutes to arrive.</p>
+  <%= link_to 'Make New Playlist', root_path, class: "button shared" %>
+</div>
+<footer class="shared-footer">
+    <div class="text-center center-block">
+      <a href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+      <a href="https://twitter.com/"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+      <a href="https://github.com/NikValdez"><i id="social-gh" class="fa fa-github fa-3x social"></i></a>
+      <a href="mailto:nikcochran@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+  </div>
+  <div class="copyright">&copy; Nik Cochran 2018</div>
+</footer>

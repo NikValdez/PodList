@@ -1,6 +1,14 @@
 //footer
 .footer {
   margin-top: 2em;
+  
+}
+.shared-footer {
+    margin-top: 2em;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .copyright {
@@ -8,6 +16,7 @@
   color: #165d96bd;
   font-family: 'VT323', monospace;
   font-size: 24px;
+  float: left;
 }
 
 .social:hover {
