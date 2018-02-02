@@ -21,7 +21,7 @@
           <button type="button", class="button", id="show-episodes">Show Episodes</button>
             <% episodes = Feedjira::Feed.fetch_and_parse(@results.first["feedUrl"]).entries %>
               <% episodes.each do |episode| %>
-              <div id="right1" class="episode-drag"><li class="episode-data"><%= episode.title %> | <%= link_to "Link", episode.url, target: "_blank" %></li></div>
+              <div id="right1" class="episode-drag"><li class="episode-data"><%= episode.title %> | <%= link_to "#{episode.url}", episode.url, target: "_blank" %></li></div>
             <% end %>
         <% end %>
       </div>
