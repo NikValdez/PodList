@@ -2,33 +2,30 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
+        <div class="modal-text">Send Playlist</div>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
         <h3 id="myModalLabel"></h3>
       </div>
       <div class="modal-body">
-          <h2>Send Playlist</h2>
-          		<%= form_for @contact do |f| %>
-          				<%= f.label :title, class: 'contact_name' %><br>
+          		<%= form_for @share do |f| %>
+          				<%= f.label :title, class: 'share_name' %><br>
           				<%= f.text_field :name, required: true, class: "form-control reg" %>
-
           				<br>
           			<div class="form-group">
           				<%= f.label :email %><br>
           				<%= f.email_field :email, required: true, class: "form-control reg" %>
           			</div>
-
           				<br>
           			<div class="form-group">
           				<%= f.label :Playlist %><br>
           				<%= f.text_area :message, as: :text, class: "form-control reg", size: "10x10" %>
           			</div>
-
             		<div class="form-group">
-            			<%= button_tag 'Send Message', class: "button", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Sending email..."} %>
+            			<%= button_tag 'Email Playlist', class: "button", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Sending email..."} %>
             		</div>
+
+                <i class='fa fa-twitter'></i><%= link_to "Tweet Playlist", "https://twitter.com/intent/tweet?text=Copy paste playlist here...", class: "button", id: "tweet", target: "_blank"  %>
            <% end %>
-
-
       </div>
       <div class="modal-footer">
         <button class="button button-2" data-dismiss="modal" aria-hidden="true">Cancel</button>

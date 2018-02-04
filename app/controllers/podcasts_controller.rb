@@ -1,6 +1,6 @@
 class PodcastsController < ApplicationController
   def search
-    @contact = Contact.new
+    @share = Share.new
     # Avoid requesting info from API if there was no search query
     term = params[:term]
     return unless term.present?
@@ -13,7 +13,7 @@ class PodcastsController < ApplicationController
   end
 
   def reload
-    @contact = Contact.new
+    @share = Share.new
     # Avoid requesting info from API if there was no search query
     term = params[:term]
     return unless term.present?

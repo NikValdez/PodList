@@ -1,0 +1,45 @@
+.masthead {
+  background: #cae7f566;
+}
+
+header.masthead {
+  padding-top: calc(6rem + 72px);
+  padding-bottom: 6rem;
+  h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+}
+@media (min-width: 992px) {
+  header.masthead {
+    padding-top: calc(6rem + 106px);
+    padding-bottom: 6rem;
+    h1 {
+      font-size: 4.75em;
+      line-height: 4rem;
+    }
+    h2 {
+      font-size: 1.75em;
+    }
+  }
+}
+
+.home-button {
+  color: #fff;
+  background-color: #02b3e4;
+  border: 0.125rem solid transparent;
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+  padding: 0.75em;
+  text-align: center;
+  border-radius: 0.25rem;
+  &:hover {
+    box-shadow: 8px 10px 20px 0px rgba(46,61,73,0.15);
+  }
+}
+
+
+.font-weight-light {
+  margin-bottom: 0.6em;
+}

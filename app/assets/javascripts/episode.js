@@ -27,6 +27,7 @@ $( document ).on('turbolinks:load', function() {
   });
 
 
+
 drake = dragula([left1, right1]);
 var leftList = document.querySelector('#left1');
 var rightList = document.querySelector('#right1');
