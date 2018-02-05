@@ -10,7 +10,6 @@
   border: 0.125rem solid transparent;
   font-family: 'Amatic SC', cursive;
   font-size: 20px;
-  margin-bottom: 3em;
   padding: 0.75em;
   text-align: center;
   border-radius: 0.25rem;
@@ -24,7 +23,7 @@
 }
 
 .home-title {
-  margin-top: 1.2em;
+  margin-top: 0.1em;
   font-size: 72px;
   font-family: 'VT323', monospace;
 }
@@ -36,4 +35,16 @@
 
 .font-weight-light {
   margin-bottom: 0.6em;
+}
+
+
+.navbar-brand {
+  font-size: 38px;
+  font-family: 'VT323', monospace;
+}
+
+
+#mainNav {
+  background: #7f96a933;
+  padding: 0 !important;
 }
