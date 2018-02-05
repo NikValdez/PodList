@@ -1,5 +1,5 @@
 
-<body id="page-top">
+<body>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
@@ -24,16 +24,15 @@
       </div>
     </div>
   </nav>
-
   <!-- Header -->
-  <header class="masthead text-center">
+  <header class="text-center">
     <div class="container">
-      <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
-      <h1 class="text-uppercase">Pod List</h1>
+      <h1 class="home-title">Pod List</h1>
       <hr class="star-light">
-      <h2 class="font-weight-light">Easily create and share podcast playlists</h2>
+      <%= image_tag("podlist.png", class: "home-image") %>
+      <h2 class="sub-title">Easily create and share podcast playlists</h2>
     </div>
-    <%= link_to "Create Playlist", "podcasts/reload", class: "home-button" %>
+    <%= link_to "Create Playlist", podcasts_reload_path, class: "home-button" %>
   </header>
   <footer class="shared-footer">
       <div class="text-center center-block">
@@ -44,7 +43,6 @@
     </div>
     <div class="copyright">&copy; Nik Cochran 2018</div>
   </footer>
-
 </body>
 
 </html>
